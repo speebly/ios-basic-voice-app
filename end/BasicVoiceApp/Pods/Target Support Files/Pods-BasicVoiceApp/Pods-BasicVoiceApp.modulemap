@@ -1,0 +1,6 @@
+framework module Pods_BasicVoiceApp {
+  umbrella header "Pods-BasicVoiceApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,11 @@
+framework module SpeeblyClientSDK {
+  umbrella header "SpeeblyClientSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module SpeeblyClientSDK.Swift {
+    header "SpeeblyClientSDK-Swift.h"
+    requires objc
+}
