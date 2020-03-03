@@ -4,18 +4,36 @@ import SpeeblyClientSDK
 
 class SpeeblyController: ObservableObject, SpeeblyQueryDelegate  {
     
-    static let shared =  SpeeblyController()
     @Published var microphoneState = MicrophoneState(displayText: "Tap to start", image: "Power", state: "start", isStarted: false)
     @Published var queryResult = QueryResult(displayText: "", transcript: " ", intent: " ", richMessages: " ")
     @Published var parialTranscript = PartialTranscript(partialTranscription: " ")
     @Published var isStarted: Bool = false
     @Published var isTranscriptFinal: Bool = false
     @Published var transcriptColor:Color = .white
-    var speebly:Speebly
-  
+    @Published var isVoice: Bool
+    @Published var eventName: String
+    var speebly:SpeeblyQuery
+    
+    init(isVoice: Bool, eventName:String) {
+        self.isVoice = isVoice
+        self.eventName = eventName
+        self.speebly = SpeeblyQuery()
+    }
+    
+   
+  /*
     init() {
-        self.speebly = Speebly()
+      //  self.speebly = SpeeblyQuery()
        // self.speebly.delegate = self
+    }
+ */
+    
+    func startVoiceQueryWithSiri(event:String) {
+        self.speebly.delegate = self
+        self.isStarted = true
+        // set mic to speeaking state
+        self.microphoneState = MicrophoneState(displayText: "Tap tp start", image: "Notlistening",  state: "speaking", isStarted: self.isStarted)
+        self.speebly.StartVoiceQuery(eventName: event)
     }
     
     func startVoiceQuery() {
@@ -88,7 +106,7 @@ class SpeeblyController: ObservableObject, SpeeblyQueryDelegate  {
     }
  
         
-    func didReceiveError(error: Error) {
+    func didReceiveError(error: SpeeblyQueryError) {
         print(error)
     }
 }

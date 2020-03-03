@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		C4D3615023E0943C00824580 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3614F23E0943C00824580 /* SceneDelegate.swift */; };
 		C4D3615723E0943C00824580 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D3615623E0943C00824580 /* Preview Assets.xcassets */; };
-		C4D3616E23E0952700824580 /* SpeeblyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3616223E0952700824580 /* SpeeblyController.swift */; };
+		C4D3616E23E0952700824580 /* contentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3616223E0952700824580 /* contentViewModel.swift */; };
 		C4D3617123E0952700824580 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3616623E0952700824580 /* ContentView.swift */; };
 		C4D3617223E0952700824580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D3616823E0952700824580 /* Assets.xcassets */; };
 		C4D3617323E0952700824580 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3616923E0952700824580 /* AppDelegate.swift */; };
 		C4D3617423E0952700824580 /* QueryResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3616B23E0952700824580 /* QueryResults.swift */; };
-		C4D3617523E0952700824580 /* MicrophoneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3616C23E0952700824580 /* MicrophoneState.swift */; };
+		C4D3617523E0952700824580 /* SpeeblyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3616C23E0952700824580 /* SpeeblyState.swift */; };
 		C4D3617623E0952700824580 /* PartialTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3616D23E0952700824580 /* PartialTranscript.swift */; };
 		E94DCCCBF6BD351693C32A08 /* Pods_BasicVoiceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1D73113C066E8006003136 /* Pods_BasicVoiceApp.framework */; };
 /* End PBXBuildFile section */
@@ -26,12 +26,12 @@
 		C4D3614A23E0943C00824580 /* BasicVoiceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicVoiceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D3614F23E0943C00824580 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C4D3615623E0943C00824580 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C4D3616223E0952700824580 /* SpeeblyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeeblyController.swift; sourceTree = "<group>"; };
+		C4D3616223E0952700824580 /* contentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contentViewModel.swift; sourceTree = "<group>"; };
 		C4D3616623E0952700824580 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C4D3616823E0952700824580 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4D3616923E0952700824580 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4D3616B23E0952700824580 /* QueryResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryResults.swift; sourceTree = "<group>"; };
-		C4D3616C23E0952700824580 /* MicrophoneState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrophoneState.swift; sourceTree = "<group>"; };
+		C4D3616C23E0952700824580 /* SpeeblyState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeeblyState.swift; sourceTree = "<group>"; };
 		C4D3616D23E0952700824580 /* PartialTranscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartialTranscript.swift; sourceTree = "<group>"; };
 		ECDCC954E426D175659E064E /* Pods-BasicVoiceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicVoiceApp.release.xcconfig"; path = "Target Support Files/Pods-BasicVoiceApp/Pods-BasicVoiceApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,7 +81,7 @@
 				C4C76E9523E09BB300FD9D31 /* Info.plist */,
 				C4D3616923E0952700824580 /* AppDelegate.swift */,
 				C4D3616823E0952700824580 /* Assets.xcassets */,
-				C4D3616123E0952700824580 /* Contoller */,
+				C4D3616123E0952700824580 /* ViewModel */,
 				C4D3616A23E0952700824580 /* Model */,
 				C4D3616523E0952700824580 /* View */,
 				C4D3614F23E0943C00824580 /* SceneDelegate.swift */,
@@ -98,12 +98,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		C4D3616123E0952700824580 /* Contoller */ = {
+		C4D3616123E0952700824580 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C4D3616223E0952700824580 /* SpeeblyController.swift */,
+				C4D3616223E0952700824580 /* contentViewModel.swift */,
 			);
-			path = Contoller;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C4D3616523E0952700824580 /* View */ = {
@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				C4D3616B23E0952700824580 /* QueryResults.swift */,
-				C4D3616C23E0952700824580 /* MicrophoneState.swift */,
+				C4D3616C23E0952700824580 /* SpeeblyState.swift */,
 				C4D3616D23E0952700824580 /* PartialTranscript.swift */,
 			);
 			path = Model;
@@ -246,13 +246,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4D3616E23E0952700824580 /* SpeeblyController.swift in Sources */,
+				C4D3616E23E0952700824580 /* contentViewModel.swift in Sources */,
 				C4D3617623E0952700824580 /* PartialTranscript.swift in Sources */,
 				C4D3615023E0943C00824580 /* SceneDelegate.swift in Sources */,
 				C4D3617123E0952700824580 /* ContentView.swift in Sources */,
 				C4D3617323E0952700824580 /* AppDelegate.swift in Sources */,
 				C4D3617423E0952700824580 /* QueryResults.swift in Sources */,
-				C4D3617523E0952700824580 /* MicrophoneState.swift in Sources */,
+				C4D3617523E0952700824580 /* SpeeblyState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

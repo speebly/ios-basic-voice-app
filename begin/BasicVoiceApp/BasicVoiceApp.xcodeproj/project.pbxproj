@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4AEFF2C240E113D00402680 /* SiriShortCutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEFF2B240E113D00402680 /* SiriShortCutVC.swift */; };
+		C4AEFF2E240E116900402680 /* SiriShortCutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AEFF2D240E116900402680 /* SiriShortCutView.swift */; };
 		C4D3615023E0943C00824580 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3614F23E0943C00824580 /* SceneDelegate.swift */; };
 		C4D3615723E0943C00824580 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D3615623E0943C00824580 /* Preview Assets.xcassets */; };
 		C4D3616E23E0952700824580 /* SpeeblyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D3616223E0952700824580 /* SpeeblyController.swift */; };
@@ -19,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C4AEFF2A240E100200402680 /* BasicVoiceApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BasicVoiceApp.entitlements; sourceTree = "<group>"; };
+		C4AEFF2B240E113D00402680 /* SiriShortCutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiriShortCutVC.swift; sourceTree = "<group>"; };
+		C4AEFF2D240E116900402680 /* SiriShortCutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiriShortCutView.swift; sourceTree = "<group>"; };
 		C4D3614A23E0943C00824580 /* BasicVoiceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicVoiceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D3614F23E0943C00824580 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C4D3615623E0943C00824580 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 		C4D3614C23E0943C00824580 /* BasicVoiceApp */ = {
 			isa = PBXGroup;
 			children = (
+				C4AEFF2A240E100200402680 /* BasicVoiceApp.entitlements */,
 				C4D3616923E0952700824580 /* AppDelegate.swift */,
 				C4D3616823E0952700824580 /* Assets.xcassets */,
 				C4D3616123E0952700824580 /* Contoller */,
@@ -85,6 +91,7 @@
 		C4D3616123E0952700824580 /* Contoller */ = {
 			isa = PBXGroup;
 			children = (
+				C4AEFF2B240E113D00402680 /* SiriShortCutVC.swift */,
 				C4D3616223E0952700824580 /* SpeeblyController.swift */,
 			);
 			path = Contoller;
@@ -93,6 +100,7 @@
 		C4D3616523E0952700824580 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C4AEFF2D240E116900402680 /* SiriShortCutView.swift */,
 				C4D3616623E0952700824580 /* ContentView.swift */,
 			);
 			path = View;
@@ -181,10 +189,12 @@
 				C4D3616E23E0952700824580 /* SpeeblyController.swift in Sources */,
 				C4D3617623E0952700824580 /* PartialTranscript.swift in Sources */,
 				C4D3615023E0943C00824580 /* SceneDelegate.swift in Sources */,
+				C4AEFF2C240E113D00402680 /* SiriShortCutVC.swift in Sources */,
 				C4D3617123E0952700824580 /* ContentView.swift in Sources */,
 				C4D3617323E0952700824580 /* AppDelegate.swift in Sources */,
 				C4D3617423E0952700824580 /* QueryResults.swift in Sources */,
 				C4D3617523E0952700824580 /* MicrophoneState.swift in Sources */,
+				C4AEFF2E240E116900402680 /* SiriShortCutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +319,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BasicVoiceApp/BasicVoiceApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BasicVoiceApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 5Y8LENSSE6;
 				ENABLE_PREVIEWS = YES;
@@ -318,6 +330,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = speebly.BasicVoiceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -329,7 +342,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BasicVoiceApp/BasicVoiceApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BasicVoiceApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 5Y8LENSSE6;
 				ENABLE_PREVIEWS = YES;
@@ -338,6 +353,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = speebly.BasicVoiceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -1,17 +1,26 @@
 import SwiftUI
 
 struct ContentView : View {
-    @ObservedObject var speebly = SpeeblyController()
+    @ObservedObject var speebly: SpeeblyController
     @State var isStarted:Bool = false
     @State var selectedView = 1
     @State private var show = false
     
-    init() {}
+    func isVoice() {
+        if speebly.isVoice {
+            speebly.startVoiceQueryWithSiri(event: speebly.eventName)
+        }
+    }
+    
+    init(eventName: String, isVoice: Bool) {
+        speebly = SpeeblyController(isVoice: isVoice, eventName: eventName)
+    }
 
     var body: some View {
         ZStack() {
             Color.black
                 .edgesIgnoringSafeArea(.all)
+             ViewControllerWrapper().frame(width:0,height: 0)
             
             VStack() {
                 HStack() {
@@ -44,7 +53,7 @@ struct ContentView : View {
                   
                      Spacer()
                 }
-            }
+            }.onAppear(perform: isVoice)
         }.onTapGesture {
             if !self.speebly.isStarted {
                 self.speebly.startVoiceQuery()

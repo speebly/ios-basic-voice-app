@@ -2,9 +2,9 @@ import SwiftUI
 import SpeeblyClientSDK
 
 
-class SpeeblyController: ObservableObject, SpeeblyQueryDelegate  {
+class ContentViewModel: ObservableObject, SpeeblyQueryDelegate  {
     
-    static let shared =  SpeeblyController()
+    static let shared =  ContentViewModel()
     @Published var microphoneState = MicrophoneState(displayText: "Tap to start", image: "Power", state: "start", isStarted: false)
     @Published var queryResult = QueryResult(displayText: "", transcript: " ", intent: " ", richMessages: " ")
     @Published var parialTranscript = PartialTranscript(partialTranscription: " ")

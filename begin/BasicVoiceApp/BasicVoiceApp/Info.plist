@@ -56,5 +56,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>com.speebly.SiriShortCut.Event1</string>
+		<string>com.speebly.SiriShortCut.Event2</string>
+		<string>com.speebly.SiriShortCut.Event3</string>
+		<string>com.speebly.SiriShortCut.Event4</string>
+		<string>com.speebly.SiriShortCut.Welcome</string>
+	</array>
 </dict>
 </plist>

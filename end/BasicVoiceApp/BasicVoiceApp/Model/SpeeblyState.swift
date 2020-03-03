@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MicrophoneState: Identifiable, Decodable {
+struct SpeeblyState: Identifiable, Decodable {
     let id = UUID()
     let displayText: String
     let image: String
