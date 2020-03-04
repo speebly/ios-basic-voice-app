@@ -20,14 +20,6 @@ class SpeeblyController: ObservableObject, SpeeblyQueryDelegate  {
         self.speebly = SpeeblyQuery()
     }
     
-   
-  /*
-    init() {
-      //  self.speebly = SpeeblyQuery()
-       // self.speebly.delegate = self
-    }
- */
-    
     func startVoiceQueryWithSiri(event:String) {
         self.speebly.delegate = self
         self.isStarted = true
@@ -76,30 +68,22 @@ class SpeeblyController: ObservableObject, SpeeblyQueryDelegate  {
     
     // speebly delagates
     func didReceiveQueryResult(speeblyQueryResult: SpeeblyQueryResponse) {
-       // if !speeblyQueryResult.intent.isEmpty {
           
             DispatchQueue.main.async {
                 self.transcriptColor = .gray
                 
                 self.parialTranscript =  PartialTranscript(partialTranscription: speeblyQueryResult.transcript)
-               // print("transcript =  " + speeblyQueryResult.transcript)
-                
-                self.queryResult =  QueryResult(displayText: speeblyQueryResult.displayText, transcript: speeblyQueryResult.transcript, intent: " ", richMessages: "")
-                
                
+                self.queryResult =  QueryResult(displayText: speeblyQueryResult.displayText, transcript: speeblyQueryResult.transcript, intent: " ", richMessages: "")
             }
-       // }
     }
     
     // speebly delegates
     
     func didReceivePartialTranscription(partialTranscription: String) {
         if partialTranscription.count > 1 {
-           
             DispatchQueue.main.async {
                 self.transcriptColor =  Color.white
-               
-               
                  self.parialTranscript =  PartialTranscript(partialTranscription: partialTranscription)
             }
         }

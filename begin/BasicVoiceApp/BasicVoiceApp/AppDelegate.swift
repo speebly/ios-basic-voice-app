@@ -9,8 +9,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        SpeeblyAuth.setClientId = "cd513580-36ea-11ea-92e0-a30458fd8f96"
-        SpeeblyAuth.setClientKey = "cd513580-36ea-11ea-92e0-a30458fd8f96"
+        Speebly.clientId = "-----clientId-----"
+        Speebly.clientKey = "-----clientKey-----"
+        Speebly.config()
         return true
     }
 
